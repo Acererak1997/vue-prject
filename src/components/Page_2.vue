@@ -22,7 +22,7 @@
         <input name="question" type="radio" />いいえ
       </form>
     </div>
-      <router-link to="../App.vue">＜ 前へ戻る</router-link>
+      <router-link to="/page1">＜ 前へ戻る</router-link>
       <router-link to="/page3">次へ進む ></router-link>
   </div>
 </template>
