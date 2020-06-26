@@ -1,21 +1,8 @@
 <template>
   <div>
-    <p v-if="msg.length > 0">
-      {{msg}}
-    </p>
-    <p v-else>
-      no text
-    </p>
-    <input type="text" v-model="msg">
+    <router-link to="/page1">基本情報入力画面 </router-link>
+    <router-link to="/page2"> アンケート画面 </router-link>
+    <router-link to="/page3"> 相談内容入力画面 </router-link>
+    <router-view></router-view>
   </div>
 </template>
-
-<script>
-export default {
-  data () {
-    return {
-      msg: 'Hello World!'
-    }
-  }
-}
-</script>
