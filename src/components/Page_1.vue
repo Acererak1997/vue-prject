@@ -8,16 +8,16 @@
     </form>
     <p>生年月日</p>
     <p>
-      <select v-model="year" @change="getDays">
-        <option v-for="n in 99" :key="n">{{ n + 1921 }}（ {{ wareki(n)}} ）</option>
+      <select v-model="year" @change="getDateFormat">
+        <option v-for="n in 99" :key="n">{{ n + 1921 }}（ {{ getWareki(n)}} ）</option>
       </select>
       年
-      <select v-model="month" @change="getDays">
+      <select v-model="month" @change="getDateFormat">
         <option v-for="n in 12" :key="n">{{ n }}</option>
       </select>
       月
       <select v-model="day">
-        <option v-for="n in days_max" :key="n">{{ n }}</option>
+        <option v-for="n in daysMax" :key="n">{{ n }}</option>
       </select>
       日
     </p>
@@ -32,17 +32,17 @@ export default {
       year: 2000,
       month: 1,
       day: 1,
-      days_max: ""
+      daysMax: ''
     };
   },
   created: function() {
-    this.getDays();
+    this.getDateFormat();
   },
   methods: {
-    getDays: function() {
-      this.days_max = new Date(this.year, this.month, 0).getDate();
+    getDateFormat : function() {
+      this.daysMax = new Date(this.year, this.month, 0).getDate();
     },
-    wareki: function(n) {
+    getWareki: function(n) {
       if( n > 97 ) {
         return `令和${n - 97}年`;
       }

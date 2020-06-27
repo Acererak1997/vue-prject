@@ -2,14 +2,14 @@
   <div>
     <h1>以下の質問にお答えください</h1>
     <p>現在、生命保険に加入されていますか？</p>
-    <form @change="second()">
+    <form @change="displaySecond()">
       <input name="question" type="radio" />はい
       <input name="question" type="radio" />いいえ
     </form>
 
     <div v-if="secondQuestion">
       <p>現在入院中ですか。または、最近３ヶ月以内に医師の診察・検査の結果、入院・手術をすすめられたことはありますか？</p>
-      <form @change="third()">
+      <form @change="displayThird()">
         <input name="question" type="radio" />はい
         <input name="question" type="radio" />いいえ
       </form>
@@ -36,14 +36,14 @@ export default {
     };
   },
   methods: {
-    second: function() {
+    displaySecond: function() {
       if (this.secondQuestion === false) {
         this.secondQuestion = true;
       }
       this.secondQuestion === true;
       return;
     },
-    third: function() {
+    displayThird: function() {
       if (this.thirdQuestion === false) {
         this.thirdQuestion = true;
       }
