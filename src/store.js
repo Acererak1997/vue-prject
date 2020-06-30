@@ -50,30 +50,4 @@ export default new Vuex.Store({
       state.day = day;
     },
   },
-  actions: {
-    getGender({ commit }, gender) {
-      commit("getGender", gender)
-    },
-    getFirstQ({ commit }, firstQ) {
-      commit("getFirstQ", firstQ)
-    },
-    getSecondQ({ commit }, secondQ) {
-      commit("getSecondQ", secondQ)
-    },
-    getThirdQ({ commit }, thirdQ) {
-      commit("getThirdQ", thirdQ)
-    },
-    getTxt({ commit }, consultationTxt) {
-      commit("getTxt", consultationTxt)
-    },
-    getYear({ commit }, year) {
-      commit("getYear", year)
-    },
-    getMonth({ commit }, month) {
-      commit("getMonth", month)
-    },
-    getDay({ commit }, day) {
-      commit("getDay", day)
-    },
-  }
 });
