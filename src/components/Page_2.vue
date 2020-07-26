@@ -37,13 +37,13 @@ export default {
   },
   computed: {
     firstQ(){
-      return this.$store.state.firstQ
+      return this.$store.getter.firstQ
     },
     secondQ(){
-      return this.$store.state.secondQ
+      return this.$store.getter.secondQ
     },
     thirdQ(){
-      return this.$store.state.thirdQ
+      return this.$store.getter.thirdQ
     },
   },
   methods: {
@@ -60,13 +60,13 @@ export default {
       return;
     },
     getFirstQ(e) {
-      this.$store.dispatch("getFirstQ", e.target.value)
+      this.$store.commit('getFirstQ', e.target.value)
     },
     getSecondQ(e) {
-      this.$store.dispatch("getSecondQ", e.target.value)
+      this.$store.commit('getSecondQ', e.target.value)
     },
     getThirdQ(e) {
-      this.$store.dispatch("getThirdQ", e.target.value)
+      this.$store.commit('getThirdQ', e.target.value)
     }
   }
 };

@@ -14,12 +14,12 @@
 export default {
   computed: {
     gender(){
-      return this.$store.state.consultationTxt;
+      return this.$store.getter.consultationTxt;
     }
   },
   methods: {
     getTex(e){
-      this.$store.dispatch("getTxt", e.target.value)
+      this.$store.commit('getTxt', e.target.value)
     },
   }
 }
